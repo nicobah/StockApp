@@ -5,6 +5,13 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>StockApp</title>
+    <script title="blazor-base-href">
+        var path = window.location.pathname.split('/');
+        var base = document.getElementsByTagName('base')[0];
+        if (window.location.host.includes('github.io')) {
+            base.setAttribute('href', '/' + path[1] + '/');
+        }
+    </script>
     <base href="/" />
     <link href="_framework/dotnet.z2vhbw4dpa.js" rel="preload" as="script" fetchpriority="high" crossorigin="anonymous" integrity="sha256-ZV0+HNr7Bkik7iSwx5Uup+4fK81TVWIQOJpP+cAH4cE=" />
     <link rel="stylesheet" href="css/app.css" />
@@ -46,13 +53,8 @@
         <span class="dismiss">🗙</span>
     </div>
     <script src="_framework/blazor.webassembly.66stpp682q.js"></script>
-    <script title="blazor-base-href">
-        var path = window.location.pathname.split('/');
-        var base = document.getElementsByTagName('base')[0];
-        if (window.location.host.includes('github.io')) {
-            base.setAttribute('href', '/' + path[1] + '/');
-        }
-    </script>
+
 </body>
 
 </html>
+
